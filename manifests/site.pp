@@ -4,7 +4,7 @@ node 'puppet-test00' {
   include role::master_server
   file {'/root/README':
     ensure => present,
-    content => $fqdn,
+    content => "Welcome to ${fqdn}\n",
   }
 }
 node /^web/ {
